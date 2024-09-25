@@ -1,4 +1,5 @@
 import Name from "./heroTiles/Name";
+import Skills from "./heroTiles/Skills";
 
 export default function Hero() {
   return (
@@ -12,8 +13,8 @@ export default function Hero() {
           <div className="col-span-3 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
             pic1
           </div>
-          <div className="col-span-3 row-span-2 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
-            skills
+          <div className="col-span-3 row-span-1 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
+            <Skills />
           </div>
           <div className="col-span-3 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
             pic2
