@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import NavBar from "./components/NavBar";
+
+const roboto_init = Roboto({
+  subsets: ["latin"],
+  weight: "300",
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
   title: "Youngwoo | Full Stack Developer",
@@ -16,15 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased`}>
+      <body className={roboto_init.variable}>
         <Providers>
-          <div className="flex">
+          <div className="flex roboto bg-soft-white dark:bg-dark-gray transition-all duration-300">
             <NavBar />
-            <div className="w-full overflow-x-auto">
+            <div className="w-full overflow-x-auto ">
               <div className="sm:h-[100vh] overflow-auto ">
-                {/* <div className="w-full flex justify-center mx-auto overflow-auto h-[calc(100vh - 120px)] overflow-y-auto relative">
-                  <div className="w-full md:max-w-6xl mx-auto">{children}</div>
-                </div> */}
                 <div className="md:max-w-6xl mx-auto">{children}</div>
               </div>
             </div>

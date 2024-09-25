@@ -1,9 +1,8 @@
 "use client";
 
 import { Fragment, useEffect, useState } from "react";
-
 import Link from "next/link";
-
+import ThemeSwitch from "./ThemeSwitch";
 import {
   Tooltip,
   TooltipContent,
@@ -12,9 +11,6 @@ import {
 } from "@/components/ui/tooltip";
 import { NavItems } from "../config";
 import { cn } from "@/lib/utils";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
-// import { ThemeToggle } from './theme-toggle';
 
 export default function SideNav() {
   const navItems = NavItems();
@@ -29,10 +25,6 @@ export default function SideNav() {
     }
   }, [isSidebarExpanded]);
 
-  const toggleSidebar = () => {
-    setIsSidebarExpanded(!isSidebarExpanded);
-  };
-
   return (
     <div className="pr-4 absolute h-full">
       <div
@@ -45,13 +37,16 @@ export default function SideNav() {
       >
         <aside className="flex h-full flex-col w-full break-words px-4 overflow-x-hidden columns-1">
           {/* Top */}
-          <div className="mt-4 relative pb-2">
-            <div className="flex flex-col space-y-1">
+          <div className="mt-4 ml-2">
+            <ThemeSwitch />
+          </div>
+          <div className="mt-8 relative pb-2">
+            <div className="flex flex-col py-4">
               {navItems.map((item, idx) => {
                 if (item.position === "top") {
                   return (
                     <Fragment key={idx}>
-                      <div className="space-y-1">
+                      <div className="my-2">
                         <SideNavItem
                           label={item.name}
                           icon={item.icon}
