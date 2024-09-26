@@ -12,8 +12,11 @@ import {
 import { SiTypescript, SiSpringboot, SiPostgresql } from "react-icons/si";
 import { CgCPlusPlus } from "react-icons/cg";
 import { DiGoogleCloudPlatform } from "react-icons/di";
+import { useState } from "react";
 
 export default function Skills() {
+  const [isHovered, setIsHovered] = useState(false);
+
   const skills = [
     <Skill icon={<FaReact />} skill="React.js" />,
     <Skill icon={<SiTypescript />} skill="TypeScript" />,
@@ -30,10 +33,22 @@ export default function Skills() {
   ];
 
   return (
-    <div className="h-[100%] py-6 w-full">
-      <h1 className="text-2xl mx-8 font-semibold">Skills</h1>
-      <div className="h-28 my-4 mx-6 p-2 rounded-xl bg-white dark:bg-neutral-600 overflow-hidden flex flex-col items-center">
-        <AnimatedList delay={1500}>{skills}</AnimatedList>
+    <div
+      className="h-[100%] py-6 w-full relative overflow-hidden"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="h-full mx-6 p-2 rounded-xl bg-white dark:bg-neutral-700 overflow-hidden flex flex-col items-center">
+        {isHovered ? (
+          <AnimatedList delay={1000}>{skills}</AnimatedList>
+        ) : (
+          <div className="bg-soft-gray dark:bg-soft-dark-gray text-soft-gray dark:text-soft-dark-gray w-36 px-4 drop-shadow-sm rounded-md flex items-center gap-3">
+            d
+          </div>
+        )}
+      </div>
+      <div className="absolute rounded-3xl top-0 w-full h-full flex items-end pb-4 backdrop-blur-sm hover:backdrop-blur-none transition-all duration-300 hover:translate-y-16">
+        <h1 className="text-4xl mx-8 mb-2 font-semibold">Skills</h1>
       </div>
     </div>
   );

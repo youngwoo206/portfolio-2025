@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
 		colors: {
-			"soft-gray": "rgb(245,245,245)",
+			"soft-gray": "rgb(240,240,240)",
 			"soft-dark-gray": "rgb(38,38,38)",
 			
         border: "hsl(var(--border))",
@@ -86,6 +86,9 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      // backgroundImage: {
+      //   'hero-me-1': "url(@assets/hero-selfie-1.jpg)"
+      // }
     },
   },
   plugins: [require("tailwindcss-animate")],
