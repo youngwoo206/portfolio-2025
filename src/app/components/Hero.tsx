@@ -2,6 +2,7 @@ import Name from "./heroTiles/Name";
 import Skills from "./heroTiles/Skills";
 import Experience from "./heroTiles/Experience";
 import Education from "./heroTiles/Education";
+import Contact from "./heroTiles/Contact";
 
 export default function Hero() {
   return (
@@ -12,6 +13,9 @@ export default function Hero() {
           <div className=" col-span-6 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
             <Experience />
           </div>
+          <div className="col-span-6 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
+            <Education />
+          </div>
           <div className="col-span-3  bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
             <div className="w-full h-full flex justify-center items-center">
               <img
@@ -21,28 +25,37 @@ export default function Hero() {
               />
             </div>
           </div>
-          <div className="col-span-3 row-span-1 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
-            <Skills />
-          </div>
-          <div className="col-span-3 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
-            pic2
-          </div>
           <div className="col-span-6 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
             <Name />
           </div>
-          <div className="col-span-3 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
-            contact
+          <div className="col-span-3 row-span-1 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
+            <Skills />
           </div>
+
           <div className="col-span-3 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
-            dog
+            <div className="w-full h-full flex justify-center items-center">
+              <img src="dog.png" alt="doggo" className="rounded-lg h-5/6" />
+            </div>
           </div>
           <div className="col-span-6 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
-            <Education />
+            <Contact />
+          </div>
+          <div className="col-span-3 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
+            <div className="w-full h-full flex justify-center items-center">
+              <img src="php2.png" alt="pfp2" className="rounded-lg h-5/6" />
+            </div>
           </div>
         </div>
       </div>
       {/*mobile layout*/}
-      <div className="flex md:hidden">mobile</div>
+      <div className="flex md:hidden">
+        <div className="grid grid-cols-2 grid-rows-3 gap-6 max-h-[85%] w-full m-12">
+          {" "}
+          <div className=" col-span-6 bg-soft-gray dark:bg-soft-dark-gray drop-shadow-md transition-all duration-300 rounded-3xl flex justify-center items-center">
+            <Experience />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

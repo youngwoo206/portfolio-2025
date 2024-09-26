@@ -14,7 +14,7 @@ export default function Education() {
         {isHovered ? (
           <div className="grid grid-cols-3 grid-rows-1 h-full p-4 gap-4">
             <div className="rounded-lg bg-soft-gray dark:bg-soft-dark-gray col-span-1">
-              <img src="wloo.png" alt="ada logo" className="rounded-lg" />
+              <img src="wloo.png" alt="waterloo logo" className="rounded-lg" />
             </div>
             <div className="rounded-lg bg-soft-gray dark:bg-soft-dark-gray col-span-2 p-4 flex flex-col justify-center">
               <h1 className="font-semibold text-2xl">University of Waterloo</h1>

@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <Hero />
       <div>
-        <h1 className="text-center text-5xl">hi</h1>
+        <h1 className="text-center text-5xl h-[100vh]">hi</h1>
       </div>
     </div>
   );
